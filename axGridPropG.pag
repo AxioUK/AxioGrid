@@ -1,0 +1,594 @@
+VERSION 5.00
+Begin VB.PropertyPage axGridPropG 
+   Caption         =   "General"
+   ClientHeight    =   3135
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5940
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3135
+   ScaleWidth      =   5940
+   Begin VB.TextBox txtCols 
+      Height          =   300
+      Left            =   2760
+      TabIndex        =   27
+      Top             =   495
+      Width           =   630
+   End
+   Begin VB.TextBox txtRows 
+      Height          =   300
+      Left            =   1050
+      TabIndex        =   26
+      Top             =   495
+      Width           =   630
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "In Edit"
+      Height          =   690
+      Left            =   45
+      TabIndex        =   22
+      Top             =   2385
+      Width           =   5850
+      Begin VB.ComboBox cmbEnterKeyBehaviour 
+         Height          =   315
+         Left            =   1635
+         Style           =   2  'Dropdown List
+         TabIndex        =   24
+         Top             =   270
+         Width           =   1530
+      End
+      Begin VB.CheckBox chkEdit 
+         Caption         =   "Allow Edit Cells on Key Press"
+         Height          =   360
+         Left            =   3375
+         TabIndex        =   23
+         Top             =   240
+         Width           =   2370
+      End
+      Begin VB.Label lblRows 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "&EnterKey Behaviour"
+         Height          =   240
+         Index           =   8
+         Left            =   -105
+         TabIndex        =   25
+         Top             =   315
+         Width           =   1635
+      End
+   End
+   Begin VB.PictureBox picLogo 
+      Appearance      =   0  'Flat
+      AutoSize        =   -1  'True
+      BackColor       =   &H80000005&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   240
+      Left            =   4995
+      Picture         =   "axGridPropG.pgx":0000
+      ScaleHeight     =   240
+      ScaleWidth      =   870
+      TabIndex        =   19
+      TabStop         =   0   'False
+      Top             =   630
+      Width           =   870
+   End
+   Begin VB.ComboBox cmbFocusRect 
+      Height          =   315
+      Left            =   1140
+      Style           =   2  'Dropdown List
+      TabIndex        =   10
+      Top             =   1995
+      Width           =   1455
+   End
+   Begin VB.ComboBox cmbUserResizing 
+      Height          =   315
+      Left            =   4410
+      Style           =   2  'Dropdown List
+      TabIndex        =   18
+      Top             =   1980
+      Width           =   1365
+   End
+   Begin VB.ComboBox cmbSelectionMode 
+      Height          =   315
+      Left            =   4410
+      Style           =   2  'Dropdown List
+      TabIndex        =   16
+      Top             =   1650
+      Width           =   1365
+   End
+   Begin VB.ComboBox cmbFillStyle 
+      Height          =   315
+      Left            =   4410
+      Style           =   2  'Dropdown List
+      TabIndex        =   14
+      Top             =   1310
+      Width           =   1365
+   End
+   Begin VB.ComboBox cmbMousePointer 
+      Height          =   315
+      Left            =   4410
+      Style           =   2  'Dropdown List
+      TabIndex        =   12
+      Top             =   960
+      Width           =   1365
+   End
+   Begin VB.ComboBox cmbHighlight 
+      Height          =   315
+      Left            =   1140
+      Style           =   2  'Dropdown List
+      TabIndex        =   8
+      Top             =   1650
+      Width           =   1455
+   End
+   Begin VB.ComboBox cmbScrollbar 
+      Height          =   315
+      Left            =   1140
+      Style           =   2  'Dropdown List
+      TabIndex        =   6
+      Top             =   1305
+      Width           =   1455
+   End
+   Begin VB.TextBox txtFixedRows 
+      Height          =   300
+      Left            =   1050
+      TabIndex        =   1
+      Top             =   135
+      Width           =   630
+   End
+   Begin VB.TextBox txtFixedCols 
+      Height          =   300
+      Left            =   2760
+      TabIndex        =   3
+      Top             =   135
+      Width           =   630
+   End
+   Begin VB.CheckBox chkAllowBigSelection 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Allow&BigSelection"
+      Height          =   285
+      Left            =   915
+      TabIndex        =   4
+      Top             =   990
+      Width           =   1680
+   End
+   Begin VB.Label lblCols 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "LCols"
+      Height          =   195
+      Index           =   0
+      Left            =   2310
+      TabIndex        =   29
+      Top             =   540
+      Width           =   390
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "&Rows"
+      Height          =   240
+      Index           =   0
+      Left            =   540
+      TabIndex        =   28
+      Top             =   540
+      Width           =   465
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "AxGrid"
+      BeginProperty Font 
+         Name            =   "Arial Rounded MT Bold"
+         Size            =   20.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF8080&
+      Height          =   480
+      Index           =   0
+      Left            =   4275
+      TabIndex        =   21
+      Top             =   -15
+      Width           =   1995
+   End
+   Begin VB.Image Image1 
+      Height          =   435
+      Left            =   3825
+      Picture         =   "axGridPropG.pgx":0B42
+      Stretch         =   -1  'True
+      Top             =   75
+      Width           =   450
+   End
+   Begin VB.Label Label4 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "v0.00"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   6.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF8080&
+      Height          =   165
+      Left            =   5310
+      TabIndex        =   20
+      Top             =   390
+      Width           =   375
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "F&ocusRect"
+      Height          =   240
+      Index           =   7
+      Left            =   90
+      TabIndex        =   9
+      Top             =   2055
+      Width           =   945
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Allow&UserResizing"
+      Height          =   240
+      Index           =   6
+      Left            =   2850
+      TabIndex        =   17
+      Top             =   2040
+      Width           =   1425
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Selection&Mode"
+      Height          =   240
+      Index           =   5
+      Left            =   2850
+      TabIndex        =   15
+      Top             =   1710
+      Width           =   1425
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&FillStyle"
+      Height          =   240
+      Index           =   4
+      Left            =   2850
+      TabIndex        =   13
+      Top             =   1370
+      Width           =   1425
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Mouse&Pointer"
+      Height          =   240
+      Index           =   3
+      Left            =   2850
+      TabIndex        =   11
+      Top             =   1020
+      Width           =   1425
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&Highlight"
+      Height          =   240
+      Index           =   2
+      Left            =   90
+      TabIndex        =   7
+      Top             =   1710
+      Width           =   945
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&ScrollBars"
+      Height          =   240
+      Index           =   1
+      Left            =   90
+      TabIndex        =   5
+      Top             =   1365
+      Width           =   945
+   End
+   Begin VB.Label lblFixedRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Fixed Ro&ws"
+      Height          =   240
+      Left            =   30
+      TabIndex        =   0
+      Top             =   180
+      Width           =   990
+   End
+   Begin VB.Label lblFixedCols 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Fixed Co&ls"
+      Height          =   240
+      Left            =   1740
+      TabIndex        =   2
+      Top             =   180
+      Width           =   945
+   End
+   Begin VB.Shape Shape1 
+      BackStyle       =   1  'Opaque
+      FillColor       =   &H00FFFFFF&
+      FillStyle       =   0  'Solid
+      Height          =   570
+      Left            =   3750
+      Top             =   15
+      Width           =   2130
+   End
+End
+Attribute VB_Name = "axGridPropG"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+
+Private Sub chkEdit_Click()
+Changed = True
+End Sub
+
+Private Sub cmbEnterKeyBehaviour_Click()
+   Changed = True
+End Sub
+
+Private Sub cmbFillStyle_Click()
+   Changed = True
+End Sub
+
+Private Sub cmbFocusRect_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbHighlight_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbMousePointer_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbScrollbar_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbSelectionMode_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbUserResizing_Click()
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_Initialize()
+  Label4.Caption = "v" & App.Major & "." & App.Minor & App.Revision
+    Call PopulateScrollBars
+    Call PopulateHighLight
+    Call PopulateFocusRect
+    Call PopulateMousePointer
+    Call PopulateFillStyle
+    Call PopulateSelectionMode
+    Call PopulateUserResizing
+    Call PopulateEnterKeyBehaviour
+End Sub
+
+Private Sub txtRows_Change()
+    Changed = True
+End Sub
+
+Private Sub txtFixedRows_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtFixedCols_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtCols_Change()
+    Changed = True
+End Sub
+
+
+Private Sub chkAllowBigSelection_Click()
+    Changed = True
+End Sub
+
+
+Private Sub PropertyPage_ApplyChanges()
+    SelectedControls(0).Rows = txtRows.Text
+    SelectedControls(0).FixedRows = txtFixedRows.Text
+    SelectedControls(0).FixedCols = txtFixedCols.Text
+    SelectedControls(0).Cols = txtCols.Text
+
+    SelectedControls(0).AllowBigSelection = (chkAllowBigSelection.Value = vbChecked)
+    If cmbScrollbar.ListIndex > -1 Then
+       SelectedControls(0).ScrollBars = cmbScrollbar.ListIndex
+    End If
+    If cmbHighlight.ListIndex > -1 Then
+       SelectedControls(0).HighLight = cmbHighlight.ListIndex
+    End If
+    If cmbFocusRect.ListIndex > -1 Then
+       SelectedControls(0).FocusRect = cmbFocusRect.ListIndex
+    End If
+    If cmbMousePointer.ListIndex > -1 Then
+        SelectedControls(0).MousePointer = cmbMousePointer.ItemData(cmbMousePointer.ListIndex)
+    End If
+    If cmbFillStyle.ListIndex > -1 Then
+       SelectedControls(0).FillStyle = cmbFillStyle.ListIndex
+    End If
+    If cmbSelectionMode.ListIndex > -1 Then
+       SelectedControls(0).SelectionMode = cmbSelectionMode.ListIndex
+    End If
+    If cmbUserResizing.ListIndex > -1 Then
+       SelectedControls(0).AllowUserResizing = cmbUserResizing.ListIndex
+    End If
+
+End Sub
+
+
+Private Sub PropertyPage_SelectionChanged()
+    txtRows.Text = SelectedControls(0).Rows
+    txtFixedRows.Text = SelectedControls(0).FixedRows
+    txtFixedCols.Text = SelectedControls(0).FixedCols
+    txtCols.Text = SelectedControls(0).Cols
+
+    chkAllowBigSelection.Value = (SelectedControls(0).AllowBigSelection And vbChecked)
+    
+    Dim nSetting As Integer
+    nSetting = SelectedControls(0).ScrollBars
+    If nSetting >= 0 And nSetting <= 3 Then
+       cmbScrollbar.ListIndex = nSetting
+    End If
+    
+    nSetting = SelectedControls(0).HighLight
+    If nSetting >= 0 And nSetting <= 2 Then
+       cmbHighlight.ListIndex = nSetting
+    End If
+    
+    nSetting = SelectedControls(0).FocusRect
+    If nSetting >= 0 And nSetting <= 2 Then
+       cmbFocusRect.ListIndex = nSetting
+    End If
+    
+    
+    Dim i As Integer
+    nSetting = SelectedControls(0).MousePointer
+    For i = 1 To cmbMousePointer.ListCount
+        If nSetting = cmbMousePointer.ItemData(i - 1) Then
+           cmbMousePointer.ListIndex = i - 1
+           Exit For
+        End If
+    Next
+
+    nSetting = SelectedControls(0).FillStyle
+    If nSetting >= 0 And nSetting <= 1 Then
+       cmbFillStyle.ListIndex = nSetting
+    End If
+
+    nSetting = SelectedControls(0).SelectionMode
+    If nSetting >= 0 And nSetting <= 2 Then
+       cmbSelectionMode.ListIndex = nSetting
+    End If
+
+    nSetting = SelectedControls(0).AllowUserResizing
+    If nSetting >= 0 And nSetting <= 3 Then
+       cmbUserResizing.ListIndex = nSetting
+    End If
+
+    chkEdit.Value = (SelectedControls(0).Editable And vbChecked)
+    
+    On Local Error Resume Next
+    txtConn.Text = SelectedControls(0).ADOConnection
+    txtTable.Text = SelectedControls(0).ADOTable
+    txtFields.Text = SelectedControls(0).ADOFields
+    
+    Dim mSetting As Integer
+    mSetting = SelectedControls(0).EnterKeyBehaviour
+    If mSetting >= 0 And mSetting <= 1 Then
+       cmbEnterKeyBehaviour.ListIndex = mSetting
+    End If
+End Sub
+
+Private Sub PopulateEnterKeyBehaviour()
+   With cmbEnterKeyBehaviour
+      .AddItem "0 - Move Down"
+      .AddItem "1 - Move Right"
+      .AddItem "2 - None"
+   End With
+End Sub
+
+Private Sub PopulateScrollBars()
+   With cmbScrollbar
+       .AddItem "0 - None"
+       .AddItem "1 - Horizontal"
+       .AddItem "2 - Vertical"
+       .AddItem "3 - Both"
+   End With
+End Sub
+
+Private Sub PopulateHighLight()
+   With cmbHighlight
+       .AddItem "0 - Never"
+       .AddItem "1 - Always"
+       .AddItem "2 - With Focus"
+   End With
+End Sub
+
+Private Sub PopulateFocusRect()
+   With cmbFocusRect
+      .AddItem "0 - None"
+      .AddItem "1 - Light"
+      .AddItem "2 - Heavy"
+   End With
+End Sub
+
+Private Sub PopulateMousePointer()
+   With cmbMousePointer
+      .AddItem "0 - Default"
+      .ItemData(cmbMousePointer.NewIndex) = 0
+      .AddItem "1 - Arrow"
+      .ItemData(cmbMousePointer.NewIndex) = 1
+      .AddItem "2 - Cross"
+      .ItemData(cmbMousePointer.NewIndex) = 2
+      .AddItem "3 - I-Beam"
+      .ItemData(cmbMousePointer.NewIndex) = 3
+      .AddItem "4 - Icon"
+      .ItemData(cmbMousePointer.NewIndex) = 4
+      .AddItem "5 - Size"
+      .ItemData(cmbMousePointer.NewIndex) = 5
+      .AddItem "6 - Size NE SW"
+      .ItemData(cmbMousePointer.NewIndex) = 6
+      .AddItem "7 - Size NS"
+      .ItemData(cmbMousePointer.NewIndex) = 7
+      .AddItem "8 - Size NW SW"
+      .ItemData(cmbMousePointer.NewIndex) = 8
+      .AddItem "9 - Size EW"
+      .ItemData(cmbMousePointer.NewIndex) = 9
+      .AddItem "10 - Up Arrow"
+      .ItemData(cmbMousePointer.NewIndex) = 10
+      .AddItem "11 - Hourglass"
+      .ItemData(cmbMousePointer.NewIndex) = 11
+      .AddItem "12 - No Drop"
+      .ItemData(cmbMousePointer.NewIndex) = 12
+      .AddItem "13 - Arrow Hourglass"
+      .ItemData(cmbMousePointer.NewIndex) = 13
+      .AddItem "14 - Arrow Question"
+      .ItemData(cmbMousePointer.NewIndex) = 14
+      .AddItem "15 - Size All"
+      .ItemData(cmbMousePointer.NewIndex) = 15
+      .AddItem "99 - Custom"
+      .ItemData(cmbMousePointer.NewIndex) = 99
+   End With
+End Sub
+
+Private Sub PopulateFillStyle()
+   With cmbFillStyle
+      .AddItem "0 - Single"
+      .AddItem "1 - Repeat"
+   End With
+End Sub
+
+Private Sub PopulateSelectionMode()
+    With cmbSelectionMode
+       .AddItem "0 - Free"
+       .AddItem "1 - By Row"
+       .AddItem "2 - By Column"
+    End With
+End Sub
+
+Private Sub PopulateUserResizing()
+   With cmbUserResizing
+      .AddItem "0 - None"
+      .AddItem "1 - Columns"
+      .AddItem "2 - Rows"
+      .AddItem "3 - Both"
+   End With
+End Sub

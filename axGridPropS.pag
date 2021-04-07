@@ -1,0 +1,426 @@
+VERSION 5.00
+Begin VB.PropertyPage axGridPropS 
+   Caption         =   "Style"
+   ClientHeight    =   3180
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3180
+   ScaleWidth      =   5925
+   Begin VB.PictureBox picLogo 
+      Appearance      =   0  'Flat
+      AutoSize        =   -1  'True
+      BackColor       =   &H80000005&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   240
+      Left            =   90
+      Picture         =   "axGridPropS.pgx":0000
+      ScaleHeight     =   240
+      ScaleWidth      =   870
+      TabIndex        =   17
+      TabStop         =   0   'False
+      Top             =   2850
+      Width           =   870
+   End
+   Begin VB.ComboBox cmbPictureType 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   4110
+      Style           =   2  'Dropdown List
+      TabIndex        =   15
+      Top             =   960
+      Width           =   1635
+   End
+   Begin VB.ComboBox cmbTextStyleFixed 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   4110
+      Style           =   2  'Dropdown List
+      TabIndex        =   13
+      Top             =   555
+      Width           =   1635
+   End
+   Begin VB.ComboBox cmbGridLinesFixed 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   4110
+      Style           =   2  'Dropdown List
+      TabIndex        =   11
+      Top             =   165
+      Width           =   1635
+   End
+   Begin VB.ComboBox cmbMergeCells 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   1230
+      Style           =   2  'Dropdown List
+      TabIndex        =   5
+      Top             =   960
+      Width           =   1575
+   End
+   Begin VB.ComboBox cmbTextStyle 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   1230
+      Style           =   2  'Dropdown List
+      TabIndex        =   3
+      Top             =   555
+      Width           =   1575
+   End
+   Begin VB.ComboBox cmbGridLines 
+      Appearance      =   0  'Flat
+      Height          =   315
+      Left            =   1230
+      Style           =   2  'Dropdown List
+      TabIndex        =   1
+      Top             =   165
+      Width           =   1575
+   End
+   Begin VB.CheckBox chkWordWrap 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Word&Wrap"
+      Height          =   285
+      Left            =   3240
+      TabIndex        =   16
+      Top             =   1455
+      Width           =   1230
+   End
+   Begin VB.TextBox txtRowHeightMin 
+      Height          =   330
+      Left            =   1230
+      TabIndex        =   7
+      Top             =   1455
+      Width           =   630
+   End
+   Begin VB.TextBox txtFormatString 
+      Height          =   345
+      Left            =   1230
+      TabIndex        =   9
+      Top             =   1995
+      Width           =   4605
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "AxGrid"
+      BeginProperty Font 
+         Name            =   "Arial Rounded MT Bold"
+         Size            =   20.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF8080&
+      Height          =   480
+      Index           =   0
+      Left            =   4245
+      TabIndex        =   19
+      Top             =   2505
+      Width           =   1995
+   End
+   Begin VB.Image Image1 
+      Height          =   435
+      Left            =   3795
+      Picture         =   "axGridPropS.pgx":0B42
+      Stretch         =   -1  'True
+      Top             =   2595
+      Width           =   450
+   End
+   Begin VB.Label Label4 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "v0.00"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   6.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF8080&
+      Height          =   165
+      Left            =   5280
+      TabIndex        =   18
+      Top             =   2910
+      Width           =   375
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&PictureType"
+      Height          =   240
+      Index           =   5
+      Left            =   2820
+      TabIndex        =   14
+      Top             =   1020
+      Width           =   1215
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "TextStyleF&ixed"
+      Height          =   240
+      Index           =   4
+      Left            =   2820
+      TabIndex        =   12
+      Top             =   615
+      Width           =   1215
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "GridLinesFi&xed"
+      Height          =   240
+      Index           =   3
+      Left            =   2820
+      TabIndex        =   10
+      Top             =   225
+      Width           =   1215
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&MergeCells"
+      Height          =   240
+      Index           =   2
+      Left            =   180
+      TabIndex        =   4
+      Top             =   1020
+      Width           =   945
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Text&Style"
+      Height          =   240
+      Index           =   0
+      Left            =   180
+      TabIndex        =   2
+      Top             =   615
+      Width           =   945
+   End
+   Begin VB.Label lblRows 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Grid&Lines"
+      Height          =   240
+      Index           =   1
+      Left            =   180
+      TabIndex        =   0
+      Top             =   225
+      Width           =   945
+   End
+   Begin VB.Label lblRowHeightMin 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Row&HeightMin"
+      Height          =   240
+      Left            =   -90
+      TabIndex        =   6
+      Top             =   1500
+      Width           =   1230
+   End
+   Begin VB.Label lblFormatString 
+      Alignment       =   1  'Right Justify
+      Caption         =   "&FormatString"
+      Height          =   240
+      Index           =   0
+      Left            =   30
+      TabIndex        =   8
+      Top             =   2055
+      Width           =   1125
+   End
+   Begin VB.Shape Shape1 
+      BackStyle       =   1  'Opaque
+      FillColor       =   &H00FFFFFF&
+      FillStyle       =   0  'Solid
+      Height          =   570
+      Left            =   3720
+      Top             =   2535
+      Width           =   2130
+   End
+End
+Attribute VB_Name = "axGridPropS"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Private Sub chkWordWrap_Click()
+    Changed = True
+End Sub
+
+
+Private Sub cmbGridLines_Click()
+  Changed = True
+End Sub
+
+
+Private Sub cmbGridLinesFixed_Click()
+   Changed = True
+End Sub
+
+
+Private Sub cmbMergeCells_Click()
+   Changed = True
+End Sub
+
+
+
+Private Sub cmbPictureType_Click()
+   Changed = True
+End Sub
+
+Private Sub cmbTextStyle_Click()
+   Changed = True
+End Sub
+
+
+
+Private Sub cmbTextStyleFixed_Click()
+   Changed = True
+End Sub
+
+Private Sub PropertyPage_Initialize()
+Label4.Caption = "v" & App.Major & "." & App.Minor & App.Revision
+ 
+   Call PopulateGridLines
+   Call PopulateTextStyle
+   Call PopulateMergeCells
+   Call PopulateGridLinesFixed
+   Call PopulateTextStyleFixed
+   Call PopulatePictureType
+End Sub
+
+
+Private Sub txtRowHeightMin_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtFormatString_Change()
+    Changed = True
+End Sub
+
+
+Private Sub PropertyPage_ApplyChanges()
+    SelectedControls(0).WordWrap = (chkWordWrap.Value = vbChecked)
+    SelectedControls(0).RowHeightMin = txtRowHeightMin.Text
+    SelectedControls(0).FormatString = txtFormatString.Text
+
+    
+    If cmbGridLines.ListIndex > -1 Then
+       SelectedControls(0).GridLines = cmbGridLines.ListIndex
+    End If
+    If cmbTextStyle.ListIndex > -1 Then
+       SelectedControls(0).TextStyle = cmbTextStyle.ListIndex
+    End If
+    If cmbMergeCells.ListIndex > -1 Then
+       SelectedControls(0).MergeCells = cmbMergeCells.ListIndex
+    End If
+    If cmbGridLinesFixed.ListIndex > -1 Then
+       SelectedControls(0).GridLinesFixed = cmbGridLinesFixed.ListIndex
+    End If
+    If cmbTextStyleFixed.ListIndex > -1 Then
+       SelectedControls(0).TextStyleFixed = cmbTextStyleFixed.ListIndex
+    End If
+    If cmbPictureType.ListIndex > -1 Then
+       SelectedControls(0).PictureType = cmbPictureType.ListIndex
+    End If
+
+End Sub
+
+
+Private Sub PropertyPage_SelectionChanged()
+    chkWordWrap.Value = (SelectedControls(0).WordWrap And vbChecked)
+    txtRowHeightMin.Text = SelectedControls(0).RowHeightMin
+    txtFormatString.Text = SelectedControls(0).FormatString
+    
+    Dim nSetting As Integer
+    nSetting = SelectedControls(0).GridLines
+    If nSetting >= 0 And nSetting <= 3 Then
+       cmbGridLines.ListIndex = nSetting
+    End If
+    nSetting = SelectedControls(0).TextStyle
+    If nSetting >= 0 And nSetting <= 4 Then
+       cmbTextStyle.ListIndex = nSetting
+    End If
+    nSetting = SelectedControls(0).MergeCells
+    If nSetting >= 0 And nSetting <= 4 Then
+       cmbMergeCells.ListIndex = nSetting
+    End If
+    nSetting = SelectedControls(0).GridLinesFixed
+    If nSetting >= 0 And nSetting <= 3 Then
+       cmbGridLinesFixed.ListIndex = nSetting
+    End If
+    nSetting = SelectedControls(0).TextStyleFixed
+    If nSetting >= 0 And nSetting <= 4 Then
+       cmbTextStyleFixed.ListIndex = nSetting
+    End If
+    nSetting = SelectedControls(0).PictureType
+    If nSetting >= 0 And nSetting <= 1 Then
+       cmbPictureType.ListIndex = nSetting
+    End If
+
+End Sub
+
+
+Private Sub PopulateGridLines()
+   With cmbGridLines
+      .AddItem "0 - None"
+      .AddItem "1 - Flat"
+      .AddItem "2 - Inset"
+      .AddItem "3 - Raised"
+   End With
+End Sub
+
+
+Private Sub PopulateTextStyle()
+   With cmbTextStyle
+      .AddItem "0 - Flat"
+      .AddItem "1 - Raised"
+      .AddItem "2 - Inset"
+      .AddItem "3 - Raised Light"
+      .AddItem "4 - Inset Light"
+   End With
+End Sub
+
+
+Private Sub PopulateMergeCells()
+   With cmbMergeCells
+      .AddItem "0 - Never"
+      .AddItem "1 - Free"
+      .AddItem "2 - Restrict Rows"
+      .AddItem "3 - Restrict Cols"
+      .AddItem "4 - Restrict All"
+   End With
+End Sub
+
+
+Private Sub PopulateGridLinesFixed()
+   With cmbGridLinesFixed
+      .AddItem "0 - None"
+      .AddItem "1 - Flat"
+      .AddItem "2 - Inset"
+      .AddItem "3 - Raised"
+   End With
+End Sub
+
+
+Private Sub PopulateTextStyleFixed()
+   With cmbTextStyleFixed
+      .AddItem "0 - Flat"
+      .AddItem "1 - Raised"
+      .AddItem "2 - Inset"
+      .AddItem "3 - Raised Light"
+      .AddItem "4 - Inset Light"
+   End With
+End Sub
+
+
+Private Sub PopulatePictureType()
+   With cmbPictureType
+      .AddItem "0 - Color"
+      .AddItem "1 - Monochrome"
+   End With
+End Sub
+
+

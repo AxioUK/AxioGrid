@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=AxioGrid.vbp
+StartupProject=test\testGrid.vbp

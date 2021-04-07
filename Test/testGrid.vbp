@@ -1,0 +1,41 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{2A75196C-D9EB-4129-B803-931327F72D5C}#2.8#0#..\..\..\..\..\..\Program Files (x86)\Common Files\System\ado\msado28.tlb#Microsoft ActiveX Data Objects 2.8 Library
+Reference=*\G{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0#..\..\..\..\..\..\Windows\SysWow64\msflxgrd.ocx#Microsoft FlexGrid Control 6.0 (SP6)
+Object={07242263-ECFB-49C3-84AD-1CD9A3F8DB91}#10.1#0; AXGRIDKM.OCX
+Form=Form1b.frm
+Module=mdlFunctions; mdlFunctions.bas
+Module=mdlSQLFunctions; mdlSQLFunctions.bas
+IconForm="Form1"
+Startup="Form1"
+Command32=""
+Name="testGrid"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="aec"
+CompilationType=-1
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[CodeSMART]
+Task_UID=22_05_14_00_10_52
